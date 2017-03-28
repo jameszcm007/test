@@ -1,0 +1,468 @@
+@import url(../src/css/common.css);
+body {
+  background: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+header {
+  width: 100%;
+  min-width: 1108px;
+  height: 52px;
+  background: #82949e; }
+  header h1 {
+    width: 272px;
+    height: 100%;
+    line-height: 50px;
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    float: left; }
+    header h1 span {
+      margin-left: 14px;
+      margin-right: 8px;
+      font-size: 26px; }
+  header ul {
+    width: 604px;
+    padding-top: 18px;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left; }
+    header ul li {
+      height: 100%;
+      line-height: 34px;
+      color: #ffffff;
+      font-size: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      cursor: pointer;
+      float: left; }
+    header ul .active {
+      color: #000000;
+      background: #f2f2f2; }
+  header label {
+    float: left; }
+    header label input {
+      width: 194px;
+      height: 30px;
+      margin-top: 11px;
+      border: none;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 30px;
+      float: left; }
+    header label span {
+      margin-top: 11px;
+      float: left;
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: #ffffff url(../img/shousuo.png) no-repeat left center;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      cursor: pointer; }
+
+section {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 12px; }
+  section .contents {
+    line-height: 36px;
+    font-size: 14px; }
+  section .new {
+    width: 42px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 6px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    color: #ffffff;
+    background: #448bc9;
+    cursor: pointer; }
+  section .edit {
+    width: 42px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    color: #ffffff;
+    background: #448bc9;
+    cursor: pointer; }
+  section .list {
+    width: 100%;
+    margin-top: 12px; }
+    section .list .workOrder {
+      width: 24%;
+      float: left;
+      background: #ffffff;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      min-width: 200px; }
+      section .list .workOrder .statusBar {
+        width: 100%;
+        height: 15px; }
+        section .list .workOrder .statusBar .level {
+          float: left;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding-left: 5px;
+          padding-right: 5px;
+          background: #de002f;
+          color: #ffffff;
+          font-size: 12px;
+          height: 100%; }
+        section .list .workOrder .statusBar .state {
+          float: right;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding-left: 5px;
+          padding-right: 5px;
+          background: #797e82;
+          color: #ffffff;
+          font-size: 12px;
+          height: 100%; }
+      section .list .workOrder .titles {
+        padding-top: 3px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 12px;
+        padding-right: 12px; }
+        section .list .workOrder .titles .title {
+          border-bottom: 1px solid #908981;
+          line-height: 30px; }
+          section .list .workOrder .titles .title div {
+            display: inline-block;
+            margin-right: 22px;
+            font-size: 12px; }
+          section .list .workOrder .titles .title .data {
+            margin-right: 4px; }
+          section .list .workOrder .titles .title .time {
+            margin-right: 0; }
+      section .list .workOrder p {
+        padding-top: 5px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+        line-height: 18px;
+        font-size: 12px; }
+      section .list .workOrder span {
+        float: right;
+        margin-top: 10px;
+        margin-right: 26px;
+        text-decoration: underline;
+        color: blue;
+        font-size: 12px;
+        margin-bottom: 12px;
+        cursor: pointer; }
+
+.navigatediv {
+  float: right;
+  margin-right: 12px;
+  margin-top: 12px; }
+
+footer {
+  width: 100%;
+  height: 24px;
+  text-align: center;
+  background: #82949e;
+  color: #ffffff;
+  font-size: 12px;
+  margin-top: 80px;
+  line-height: 24px; }
+
+.layer {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  background: #c2c2c2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5; }
+
+.ticket {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 744px;
+  height: 600px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .ticket .ticketTitle {
+    background: #888d90;
+    height: 36px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff; }
+  .ticket .ticketContent {
+    width: 100%;
+    height: 564px;
+    background: #ffffff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 16px; }
+    .ticket .ticketContent .ticketTitles {
+      width: 100%;
+      height: 39px;
+      border-bottom: 1px solid #8f867f;
+      line-height: 39px;
+      font-size: 12px; }
+      .ticket .ticketContent .ticketTitles div {
+        float: left; }
+      .ticket .ticketContent .ticketTitles .No {
+        margin-left: 4px; }
+      .ticket .ticketContent .ticketTitles .ticketNo {
+        margin-left: 6px; }
+      .ticket .ticketContent .ticketTitles .applicant {
+        margin-left: 26px; }
+      .ticket .ticketContent .ticketTitles .ticketApplicant {
+        margin-left: 6px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 1px solid #848484;
+        height: 22px;
+        margin-top: 8px;
+        line-height: 20px; }
+      .ticket .ticketContent .ticketTitles .appTime {
+        float: right; }
+      .ticket .ticketContent .ticketTitles .ticketAppTime {
+        float: right;
+        margin-left: 6px; }
+    .ticket .ticketContent .ticketState {
+      margin-top: 12px;
+      margin-bottom: 16px; }
+      .ticket .ticketContent .ticketState div {
+        float: left;
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px; }
+      .ticket .ticketContent .ticketState .priority {
+        margin-left: 4px; }
+      .ticket .ticketContent .ticketState .high {
+        margin-left: 8px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #dc0030;
+        color: #ffffff; }
+      .ticket .ticketContent .ticketState .normal {
+        margin-left: 12px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #bcbcbc;
+        color: #ffffff; }
+      .ticket .ticketContent .ticketState .low {
+        margin-left: 12px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #bcbcbc;
+        color: #ffffff; }
+      .ticket .ticketContent .ticketState .category {
+        margin-left: 60px; }
+      .ticket .ticketContent .ticketState .infar {
+        margin-left: 8px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #bcbcbc;
+        color: #ffffff; }
+      .ticket .ticketContent .ticketState .ap {
+        margin-left: 12px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #898d90;
+        color: #ffffff; }
+      .ticket .ticketContent .ticketState .other {
+        margin-left: 12px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #bcbcbc;
+        color: #ffffff; }
+    .ticket .ticketContent .desc {
+      float: left;
+      margin-left: 4px;
+      font-size: 12px;
+      width: 13%; }
+    .ticket .ticketContent .descText {
+      width: 86%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border: 1px solid #909090;
+      font-size: 12px;
+      line-height: 18px;
+      resize: none;
+      background: #ffffff; }
+    .ticket .ticketContent .finstate {
+      border-bottom: 1px solid #8f867f;
+      width: 100%;
+      height: 48px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 14px;
+      padding-bottom: 10px;
+      font-size: 12px;
+      line-height: 24px; }
+      .ticket .ticketContent .finstate .pic {
+        float: left;
+        margin-left: 4px; }
+      .ticket .ticketContent .finstate .picName {
+        float: left;
+        margin-left: 8px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 1px solid #848484; }
+      .ticket .ticketContent .finstate .finTime {
+        float: right;
+        margin-left: 4px; }
+      .ticket .ticketContent .finstate .fin {
+        float: right; }
+    .ticket .ticketContent .status {
+      width: 100%;
+      margin-top: 12px;
+      margin-bottom: 16px;
+      height: 18px;
+      font-size: 12px;
+      line-height: 18px; }
+      .ticket .ticketContent .status .statusName {
+        margin-left: 4px;
+        float: left; }
+      .ticket .ticketContent .status .Initial {
+        margin-left: 12px;
+        background: #898d90;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #ffffff;
+        float: left; }
+      .ticket .ticketContent .status .onGoing {
+        margin-left: 12px;
+        background: #bdbdbd;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #ffffff;
+        float: left; }
+      .ticket .ticketContent .status .Re-Star {
+        margin-left: 12px;
+        background: #bdbdbd;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #ffffff;
+        float: left; }
+      .ticket .ticketContent .status .Finish {
+        margin-left: 12px;
+        background: #bdbdbd;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #ffffff;
+        float: left; }
+      .ticket .ticketContent .status .unit {
+        float: right;
+        margin-right: 4px; }
+      .ticket .ticketContent .status .select {
+        float: right;
+        margin-right: 4px; }
+      .ticket .ticketContent .status .lasts {
+        float: right;
+        margin-right: 4px; }
+    .ticket .ticketContent .record {
+      float: left;
+      margin-left: 4px;
+      font-size: 12px;
+      width: 10%; }
+    .ticket .ticketContent .recordText {
+      width: 89%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border: 1px solid #909090;
+      font-size: 12px;
+      line-height: 18px;
+      resize: none;
+      background: #ffffff; }
+    .ticket .ticketContent .save {
+      float: right;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      height: 22px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #ffffff;
+      background: #3a8ed4;
+      font-size: 12px;
+      line-height: 22px;
+      cursor: pointer; }
+    .ticket .ticketContent .upload {
+      float: right;
+      margin-right: 12px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      height: 22px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #ffffff;
+      background: #3a8ed4;
+      font-size: 12px;
+      line-height: 22px;
+      cursor: pointer; }
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0; }
+
+.clearfix {
+  zoom: 1; }
